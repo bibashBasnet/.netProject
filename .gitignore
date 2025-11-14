@@ -42,10 +42,10 @@ local.settings.json
 *.p12
 
 # Development config (DO NOT COMMIT SECRETS)
-appsettings.Development.json
-appsettings.Local.json
-appsettings.*.Development.json
-appsettings.*.Local.json
+*/appsettings.Development.json
+*/appsettings.Local.json
+*/appsettings.*.Development.json
+*/appsettings.*.Local.json
 
 # Publish output
 publish/
