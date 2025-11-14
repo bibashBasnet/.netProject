@@ -16,7 +16,7 @@
 Thumbs.db
 
 # VS Code
-.vscode/
+.vs/
 .history/
 
 # Rider
