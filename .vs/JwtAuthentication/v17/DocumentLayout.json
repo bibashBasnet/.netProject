@@ -62,8 +62,7 @@
               "RelativeToolTip": "JwtAuthentication\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-13T12:20:30.099Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T12:20:30.099Z"
             },
             {
               "$type": "Document",
@@ -73,7 +72,7 @@
               "RelativeDocumentMoniker": "JwtAuthentication\\appsettings.json",
               "ToolTip": "C:\\Users\\user\\Desktop\\MyFile\\Projects\\JwtAuthentication\\JwtAuthentication\\appsettings.json",
               "RelativeToolTip": "JwtAuthentication\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-11-13T12:13:29.05Z",
               "EditorCaption": ""
@@ -88,8 +87,7 @@
               "RelativeToolTip": "JwtAuthentication\\JwtAuthentication.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-11-12T05:30:27.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T05:30:27.831Z"
             },
             {
               "$type": "Document",
@@ -101,8 +99,7 @@
               "RelativeToolTip": "JwtAuthentication\\Services\\AuthService.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAxwBwAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T07:23:02.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T07:23:02.015Z"
             },
             {
               "$type": "Document",
@@ -114,8 +111,7 @@
               "RelativeToolTip": "JwtAuthentication\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-13T11:42:16.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T11:42:16.934Z"
             },
             {
               "$type": "Document",
@@ -127,8 +123,7 @@
               "RelativeToolTip": "JwtAuthentication\\Services\\IAuthService.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAIwAwAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T07:22:15.625Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T07:22:15.625Z"
             },
             {
               "$type": "Document",
@@ -140,8 +135,7 @@
               "RelativeToolTip": "JwtAuthentication\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T10:47:44.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T10:47:44.196Z"
             },
             {
               "$type": "Document",
@@ -153,8 +147,7 @@
               "RelativeToolTip": "JwtAuthentication\\Controllers\\UserController.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T07:47:31.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T07:47:31.8Z"
             },
             {
               "$type": "Document",
@@ -166,8 +159,7 @@
               "RelativeToolTip": "JwtAuthentication\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T11:22:36.638Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T11:22:36.638Z"
             },
             {
               "$type": "Document",
@@ -179,8 +171,7 @@
               "RelativeToolTip": "JwtAuthentication\\DTO\\NormalDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T10:36:31.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T10:36:31.571Z"
             }
           ]
         }
