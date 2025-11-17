@@ -3,7 +3,6 @@ using JwtAuthentication.Model;
 using JwtAuthentication.Services;
 using Microsoft.AspNetCore.Mvc;
 
-//using System.Security.Claims;
 
 namespace JwtAuthentication.Controllers
 {
