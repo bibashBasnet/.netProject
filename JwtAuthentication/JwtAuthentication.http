@@ -1,13 +1,17 @@
 @URL = https://localhost:7233
-@Token = eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiUmFtIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIyIiwiZXhwIjoxNzYzMTE3MzA2LCJpc3MiOiJKd3RUb2tlbiIsImF1ZCI6Ikp3dFRva2VuIn0.A-JNsgyrqyW6Me32PUc6-25HDBcycXlSnKrtg7uPaZSwjbqP2ciBrTKBGFp8M55jykt5QtG5ZlVuE8oHGNMO5Q
+
+
+
 
 ###Register api
 POST {{URL}}/api/Auth/Register
 Accept: application/json
 Content-Type: application/json
 {
-  "UserName": "Sita",
-  "Password": "Sita123"
+  "UserName": "Ramesh",
+  "Password": "Ramesh123",
+  "Role": "User",
+  "Age": "22"
 }
 
 ###Login api
@@ -15,34 +19,35 @@ POST {{URL}}/api/Auth/Login
 Accept: application/json
 Content-Type: application/json
 {
-  "UserName": "Ram",
-  "Password": "Ram123"
+  "UserName": "Ramesh",
+  "Password": "Ramesh123"
 }
 
 ### Get all user
 GET {{URL}}/api/User?page=1&pageSize=5&sortBy=username&sortOrder=desc&word=
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiSGFycnkiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJleHAiOjE3NjMxMTY3NzIsImlzcyI6Ikp3dFRva2VuIiwiYXVkIjoiSnd0VG9rZW4ifQ.U6qbG5Xbuvnmelgq0eqp5XuJaGmTWvUs-T3hP_qA4wQlHUO4m-H8O-0bv1FgHq87J2uv7QHOeLFAAFSJ4SOcqA
-
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiUmFtZXNoIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIxMCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NjM0NTA1NTIsImlzcyI6IkpXVCIsImF1ZCI6IkpXVCJ9.owbLCWX6A9pWaIcZSjJKvAU6gblGN5E2g6Z0F4-TCHcYl3w_80d9Rdrzf_SvzlFdlt-gqRTr8E5NPwCTuEhctQ
 
 ### Get user by id 
-GET {{URL}}/api/User/1
+GET {{URL}}/api/User/10
 Accept: application/json
-Authorization: Bearer {{Token}}
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiUmFtZXNoIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIxMCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NjM0NTEyNjMsImlzcyI6IkpXVCIsImF1ZCI6IkpXVCJ9.XC3EnxQxs35glHXtHu51H2QRYA2AsEkXaNOTEit-7Q_XbQsqQTHP6wHh92Ca6OxRFoqhg1XsGKXRs5aOBrD9YA
 
-### Get user by id
+### Delete user by id
 DELETE {{URL}}/api/User/1
 Accept: application/json
 Authorization: Bearer {{Token}}
 
 ### Update user 
-PUT {{URL}}/api/User/2
+PUT {{URL}}/api/User/10
 Accept: application/json
-Authorization: Bearer {{Token}}
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiUmFtZXNoIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiIxMCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NjM0NTEyNjMsImlzcyI6IkpXVCIsImF1ZCI6IkpXVCJ9.XC3EnxQxs35glHXtHu51H2QRYA2AsEkXaNOTEit-7Q_XbQsqQTHP6wHh92Ca6OxRFoqhg1XsGKXRs5aOBrD9YA
 Content-Type: application/json
 
 {
-  "UserName": "Ram",
-  "Password": "Ram@gmail.com"
+  "UserName": "Rames",
+  "Password": "Ramesh123",
+  "Role": "Admin",
+  "Age": "18"
 }
 

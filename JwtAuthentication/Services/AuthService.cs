@@ -1,9 +1,7 @@
 ﻿using JwtAuthentication.Data;
 using JwtAuthentication.DTO;
 using JwtAuthentication.Model;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -19,8 +17,8 @@ namespace JwtAuthentication.Services
         {
             var claims = new List<Claim> {
                 new Claim(ClaimTypes.Name, user.UserName),
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
-
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Role, user.Role),
             };
 
             var key = new SymmetricSecurityKey(
@@ -64,6 +62,8 @@ namespace JwtAuthentication.Services
                 .HashPassword(user, request.Password);
             user.UserName = request.UserName;
             user.Password = hashPassword;
+            user.Role = request.Role;
+            user.Age = request.Age;
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
@@ -107,17 +107,21 @@ namespace JwtAuthentication.Services
         public async Task<NormalDto?> UpdateUserAsync(int id, UserDto updateData) {
             var user = await _context.Users.FindAsync(id);
             if (user is null) { return null; }
-            User newUser = new User
-            {
-                Id = id,
-                UserName = updateData.UserName,
-                Password = updateData.Password, 
-            };
+            User usr = new User();
+            var hashedPassword = new PasswordHasher<User>()
+                .HashPassword(usr, updateData.Password);
+
+            user.UserName = updateData.UserName;
+            user.Password = hashedPassword;
+            user.Role = updateData.Role;
+            user.Age = updateData.Age;
             await _context.SaveChangesAsync();
             NormalDto updatedUser = new NormalDto
             {
                 Id = id,
                 UserName = updateData.UserName,
+                Role = updateData.Role,
+                Age = updateData.Age
             };
             return updatedUser;
         }

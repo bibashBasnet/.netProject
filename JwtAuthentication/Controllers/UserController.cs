@@ -2,8 +2,8 @@
 using JwtAuthentication.Model;
 using JwtAuthentication.Services;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+
 
 namespace JwtAuthentication.Controllers
 {
@@ -11,8 +11,8 @@ namespace JwtAuthentication.Controllers
     [ApiController]
     public class UserController(IAuthService authService) : ControllerBase
     {
-        [Authorize]
         [HttpGet]
+        [Authorize(Policy = "AdminAccess")]
         public async Task<ActionResult<IEnumerable<NormalDto>>> GetUser(
             int page = 1, int pageSize = 5, string word = "", string sortBy = "", string sortOrder = "asc"
             )
@@ -52,9 +52,15 @@ namespace JwtAuthentication.Controllers
             return Ok(users);
         }
 
-        [Authorize]
+        [Authorize(Policy = "NormalAccess")]
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUserById(int id) {
+            var tokenUserId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            var isAdmin = User.IsInRole("Admin");
+            if (!isAdmin && tokenUserId != id.ToString())
+            {
+                return Forbid();
+            }
             var user = await authService.GetUserByIdAsync(id);
             if(user is null)
             {
@@ -63,11 +69,17 @@ namespace JwtAuthentication.Controllers
             return Ok(user);
         }
 
-        [Authorize]
+        [Authorize(Policy = "NormalAccess")]
         [HttpDelete("{id}")]
 
         public async Task<ActionResult<NormalDto>> DeleteUser(int id)
         {
+            var tokenId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            var isAdmin = User.IsInRole("Admin");
+            if(!isAdmin && tokenId != id.ToString())
+            {
+                return Forbid();
+            }
             var user = await authService.GetUserByIdAsync(id);
             if(user is null)
             {
@@ -77,10 +89,16 @@ namespace JwtAuthentication.Controllers
             return Ok($"User has been deleted.");
         }
 
-        [Authorize]
+        [Authorize(Policy = "NormalAccess")]
         [HttpPut("{id}")]
         public async Task<ActionResult<NormalDto>> UpdateUser(int id, UserDto updateData)
         {
+            var tokenId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            var isAdmin = User.IsInRole("Admin");
+            if(!isAdmin && tokenId != id.ToString())
+            {
+                return Forbid();
+            }
             var user = await authService.GetUserByIdAsync(id);
             if(user is null)
             {

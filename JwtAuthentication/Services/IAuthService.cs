@@ -1,6 +1,5 @@
 ﻿using JwtAuthentication.DTO;
 using JwtAuthentication.Model;
-using System.Collections;
 
 namespace JwtAuthentication.Services
 {
